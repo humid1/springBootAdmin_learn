@@ -4,7 +4,7 @@ eureka:
   instance:
     hostname: 127.0.0.1
   client:
-    register-with-eureka: false # ÊÇ·ñÔÚeureka×¢²á
-    fetch-registry: false       # »ñÈ¡×¢²á±í
+    register-with-eureka: false # æ˜¯å¦åœ¨eurekaæ³¨å†Œ
+    fetch-registry: false       # è·å–æ³¨å†Œè¡¨
     service-url:
       default-zone: http://${eureka.instance.hostname}:8761/eureka/

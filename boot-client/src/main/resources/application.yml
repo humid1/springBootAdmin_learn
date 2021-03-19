@@ -24,8 +24,8 @@ management:
 
 eureka:
 #  instance:
-#    health-check-url-path: /actuator/health   #Ó¦ÓÃÊµÀıµÄÏà¶ÔÔËĞĞ×´¿ö¼ì²éURLÂ·¾¶Ä¬ÈÏÎª /info/health
+#    health-check-url-path: /actuator/health   #åº”ç”¨å®ä¾‹çš„ç›¸å¯¹è¿è¡ŒçŠ¶å†µæ£€æŸ¥URLè·¯å¾„é»˜è®¤ä¸º /info/health
   client:
     service-url:
-      default-zone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/  #×¢²áÖĞĞÄµØÖ·
+      default-zone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/  #æ³¨å†Œä¸­å¿ƒåœ°å€
 

@@ -9,29 +9,29 @@ eureka:
 #  instance:
 #    health-check-url: /actuator/health
   client:
-#    registryFetchIntervalSeconds: 5   # ×¢²á±í»ñÈ¡¼ä¸ôÃë
+#    registryFetchIntervalSeconds: 5   # æ³¨å†Œè¡¨è·å–é—´éš”ç§’
     service-url:
-      default-zone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/  #×¢²áµ½ EurekaServer
+      default-zone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/  #æ³¨å†Œåˆ° EurekaServer
 
 management:
   endpoints:
     web:
       exposure:
-        include: "*"  #±©Â¶ËùÓĞµÄ¶ËµãÎÒÃÇ¿ÉÒÔ¿´µ½¸ü¶àÓ¦ÓÃÏà¹ØĞÅÏ¢
+        include: "*"  #æš´éœ²æ‰€æœ‰çš„ç«¯ç‚¹æˆ‘ä»¬å¯ä»¥çœ‹åˆ°æ›´å¤šåº”ç”¨ç›¸å…³ä¿¡æ¯
   endpoint:
     health:
-      show-details: ALWAYS  #health endpointÊÇ·ñ±ØĞëÏÔÊ¾È«²¿Ï¸½Ú
+      show-details: ALWAYS  #health endpointæ˜¯å¦å¿…é¡»æ˜¾ç¤ºå…¨éƒ¨ç»†èŠ‚
 
 ---
 
-# adminµÇÂ¼µÄÓÃ»§ÃûºÍÃÜÂë
+# adminç™»å½•çš„ç”¨æˆ·åå’Œå¯†ç 
 spring:
   security:
     user:
       name: admin
       password: admin
 
-# ×¢²á¸øeurekaµÄÊ±ºò¸æËßeureka×Ô¼ºµÄÃÜÂë
+# æ³¨å†Œç»™eurekaçš„æ—¶å€™å‘Šè¯‰eurekaè‡ªå·±çš„å¯†ç 
 eureka:
   instance:
     metadata-map:
