@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: admin-client
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8768
+        username: admin
+        password: admin
+        instance:
+          prefer-ip: true
+server:
+  port: 8768
+
+management:
+ endpoints:
+   web:
+     exposure:
+       include: '*'
+ endpoint:
+   health:
+     show-details: ALWAYS
+
+
+eureka:
+#  instance:
+#    health-check-url-path: /actuator/health   #应用实例的相对运行状况检查URL路径默认为 /info/health
+  client:
+    service-url:
+      default-zone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/  #注册中心地址
+
