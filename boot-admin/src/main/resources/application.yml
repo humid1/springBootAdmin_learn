@@ -28,12 +28,13 @@ management:
 spring:
   security:
     user:
-      name: "admin"
-      password: "admin"
+      name: admin
+      password: admin
 
 # 注册给eureka的时候告诉eureka自己的密码
 eureka:
   instance:
     metadata-map:
-      "user.name": ${spring.security.user.name}         #These two are needed so that the server
-      "user.password": ${spring.security.user.password} #can access the protected client endpoints
+      user:
+        name: ${spring.security.user.name}         #These two are needed so that the server
+        password: ${spring.security.user.password} #can access the protected client endpoints
